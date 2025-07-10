@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open in Trust Wallet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+      padding: 40px;
+    }
+    .box {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 24px;
+      background-color: #2d3748;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Trust Wallet Access</h2>
+    <p>If you're on <strong>iOS</strong>, you'll be redirected automatically.</p>
+    <p>If you're on <strong>Android</strong>, please tap the button below to continue:</p>
+    <a href="https://link.trustwallet.com/open_url?url=https://trustwallet-knu5.vercel.app/" class="button">Open in Trust Wallet DApp Browser</a>
+  </div>
+
+  <script>
+    const ua = navigator.userAgent.toLowerCase();
+    const isAndroid = ua.includes("android");
+    const isIOS = /iphone|ipad|ipod/.test(ua);
+
+    if (isIOS) {
+      window.location.href = "https://trustwallet-knu5.vercel.app/";
+    }
+  </script>
+</body>
+</html>
